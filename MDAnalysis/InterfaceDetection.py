@@ -68,27 +68,3 @@ if __name__ == '__main__':
 		f.write(','.join(InterfaceA) + '\n')
 		f.write(','.join(InterfaceB) + '\n')
 		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
