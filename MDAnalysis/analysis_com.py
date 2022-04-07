@@ -43,31 +43,3 @@ if __name__ == '__main__':
 	plt.plot(frame, distance_com)  # Plot the chart
 	plt.savefig('COM_MoleculeDistance.png')
 
-'''
-	################################################################
-	################## Trajectory and topology #####################
-	################################################################
-	
-	XTC = '/home/quocbao/Document/Teaching_gromacs/Leptin_elastic_network/simulation_space/prod_protein.xtc'
-	PDB = '/home/quocbao/Document/Teaching_gromacs/Leptin_elastic_network/fix_pbc/frame0.pdb'
-	
-	u = MDAnalysis.Universe(PDB, XTC)
-	
-	distance_com = []
-	frame = []
-	
-	for ts in u.trajectory:
-		
-		B = u.select_atoms("resid 1-206 and segid A and name BB").center_of_geometry()
-		A = u.select_atoms("resid 1-146 and segid B and name BB").center_of_geometry()
-		distances = distance.euclidean(B, A)
-		distance_com.append(distances)
-		frame.append(ts.frame)
-
-
-	plt.plot(frame, distance_com)  # Plot the chart
-	plt.show()  # display
-'''
-
-
-
