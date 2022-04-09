@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 
 ## Mapping from atomistic to coarse grained and vice versa
 
