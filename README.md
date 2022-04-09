@@ -8,5 +8,5 @@ conda env create -f env.yml
 
 #The script in MDAnalysis directory requires software and python libraries specified in env.yml script.
 
-#The backmapping approach requires python2 environment. The python, bash script and mapping files required for backmapping were downloaded from http://cgmartini.nl/index.php/tutorials-general-introduction-gmx5/others-gmx5. 
+#The backmapping approach requires python2 environment. The python, bash script and mapping files required for backmapping were obtained from http://cgmartini.nl/index.php/tutorials-general-introduction-gmx5/others-gmx5. 
 
