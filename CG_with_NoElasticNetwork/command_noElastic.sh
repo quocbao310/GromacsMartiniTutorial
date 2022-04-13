@@ -54,6 +54,8 @@ gmx_mpi mdrun -s npt_20fs.tpr -deffnm npt_20fs -ntomp 8 -v
 
 gmx_mpi grompp -f ../../mdp/prod.mdp -c npt_20fs.gro -r npt_20fs.gro -p system.top -o prod.tpr
 
+gmx_mpi mdrun -s prod.tpr -deffnm prod -ntomp 8 -v
+
 # Fix pbc 
 gmx_mpi trjconv -s ../simulation_space/prod.tpr -f ../simulation_space/prod.xtc -o prod_noPBC.xtc -pbc nojump -center -ur compact<<EOF
 1
