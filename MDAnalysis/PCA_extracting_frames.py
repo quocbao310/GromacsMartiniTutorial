@@ -27,6 +27,7 @@ def validate_file(f):
 if __name__ == "__main__":
 
 	parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser(description = 'Interacting with the principle component map to extract favorable states')
 	parser.add_argument("--input", type=validate_file, help='Input file (2dproj.xvg)')
 	parser.add_argument('--traj', help='Trajectory (traj.xtc)')
 	parser.add_argument('--tpr', help='Topology (topol.tpr)')
