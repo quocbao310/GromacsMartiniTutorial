@@ -23,6 +23,7 @@ def validate_file(f):
 if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser(description = 'Distance of center of mass of two interacting molecules over the course of the simulation')
 	parser.add_argument("-traj", type=validate_file, help="Trajectory: xtc trr cpt", required=True)
 	parser.add_argument("-tpr", type=validate_file, help="Structure+mass(db): tpr gro pdb", required=True)
 	args = parser.parse_args()	
