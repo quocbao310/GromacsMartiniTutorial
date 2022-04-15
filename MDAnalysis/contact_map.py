@@ -95,6 +95,7 @@ if __name__ == '__main__':
 	
 	
 	parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser(description = 'Contact map generator')
 	parser.add_argument("-traj", type=validate_file, help="Trajectory: xtc trr cpt", required=True)
 	parser.add_argument("-tpr", type=validate_file, help="Structure+mass(db): tpr gro pdb", required=True)
 	parser.add_argument("-interface", type=validate_file, help="File containing interface residues", required=False)
