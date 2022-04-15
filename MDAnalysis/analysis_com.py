@@ -42,5 +42,8 @@ if __name__ == '__main__':
 		frame.append(ts.frame)		
 
 	plt.plot(frame, distance_com)  # Plot the chart
+	plt.xlabel('Time (ps)')
+	plt.ylabel('Distance (nm)')
+
 	plt.savefig('COM_MoleculeDistance.png')
 
