@@ -55,6 +55,7 @@ def DetectingInterfaceResidues(chainA, chainB, PDBFile):
 if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser(description = 'Detecting the interface residue of two interacting molecules')
 	parser.add_argument("-chain1", help="Name of the first chain", required=True)
 	parser.add_argument("-chain2", help="Name of the second chain", required=True)
 	parser.add_argument("-PDBFile", type=validate_file, help="Complex PDB file", required=True)
