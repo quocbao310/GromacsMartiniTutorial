@@ -35,7 +35,7 @@ gmx_mpi grompp -f ../../mdp/npt_2fs.mdp -c minimization.gro -p system.top -o npt
 
 gmx_mpi mdrun -s npt_2fs.tpr -deffnm npt_2fs -ntomp 8 -v
 
-gmx_mpi grompp -f ../../mdp/npt_10fs.mdp -c npt_2fs.gro -r npt_2fs.gro -p system.top -o npt_10fs.tprgmx_mpi trjconv -s ../simulation_space/prod.tpr -f ../simulation_space/prod.xtc -o prod_noPBC.xtc -pbc nojump -center -ur compact
+gmx_mpi grompp -f ../../mdp/npt_10fs.mdp -c npt_2fs.gro -r npt_2fs.gro -p system.top -o npt_10fs.tpr
 
 gmx_mpi mdrun -s npt_10fs.tpr -deffnm npt_10fs -ntomp 8 -v
 
