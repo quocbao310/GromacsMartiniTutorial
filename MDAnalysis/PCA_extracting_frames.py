@@ -67,7 +67,7 @@ if __name__ == "__main__":
 		print(index)
 		print(PC1[index], PC2[index])
 		
-		p = subprocess.Popen(['gmx_2021.2', 'trjconv', 
+		p = subprocess.Popen(['gmx_mpi', 'trjconv', 
 					'-f', args.traj, '-s', args.tpr,
 					'-dump', str(int(index) * args.dt), '-o', 'frame_' + str(PC1[index]) + '_' + str(PC2[index]) + '_' + str(int(index) * args.dt) + '.pdb'],
 					stdin=subprocess.PIPE)		
