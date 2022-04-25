@@ -293,7 +293,7 @@ G="gmx_mpi grompp -f $mdp -c $GRO -n $NDX -p $OTP -o $BASE -maxwarn 2"
 echo $G; $G || exit
 
 # Run
-M="gmx_mpi mdrun -deffnm $BASE -v -ntomp 32"
+M="gmx_mpi mdrun -deffnm $BASE -v -ntomp 8"
 echo $M; $M 
 
 # Timing
@@ -324,7 +324,7 @@ G="gmx_mpi grompp -f $mdp -c $GRO -n $NDX -p $OTP -o $BASE -maxwarn 2"
 echo $G; $G || exit
 
 # Run
-M="gmx_mpi mdrun -deffnm $BASE -v -ntomp 32"
+M="gmx_mpi mdrun -deffnm $BASE -v -ntomp 8"
 echo $M; $M 
 
 # Timing
@@ -390,7 +390,7 @@ __MDP__
   echo $G; $G || exit
 
   # Perform run
-  M="gmx_mpi mdrun -deffnm $BASE -v -ntomp 32"
+  M="gmx_mpi mdrun -deffnm $BASE -v -ntomp 8"
   echo $M; $M 
 
   # Collect timing information
@@ -418,7 +418,7 @@ do
   tag=$((++i))-md-${m##*/}
   G="gmx_mpi grompp -f $mdp -c $GRO -r $BW -p $OTP -o $tag -maxwarn 2"
   echo $G; $G || exit
-  M="gmx_mpi mdrun -deffnm $tag -v -ntomp 32"
+  M="gmx_mpi mdrun -deffnm $tag -v -ntomp 8"
   echo $M; $M 
   GRO=$tag.gro
 
