@@ -175,8 +175,8 @@ if __name__ == '__main__':
 										
 						matrix[i][j] = distances	
 						
-				flip_matrix = np.flip(matrix,0)
-				plotting_matrix_chain(flip_matrix, ts.frame, 'Chain ' + str(args.chain))			
+				#flip_matrix = np.flip(matrix,0)
+				plotting_matrix_chain(matrix, ts.frame, 'Chain ' + str(args.chain))			
 		
 	else:
 		for ts in u.trajectory:
@@ -199,8 +199,8 @@ if __name__ == '__main__':
 
 						matrix[i][j] = distances
 			
-				flip_matrix = np.flip(matrix,0)
-				plotting_matrix(flip_matrix, ts.frame)				
+				#flip_matrix = np.flip(matrix,0)
+				plotting_matrix(matrix, ts.frame)				
 
 
 	# Create the frames
